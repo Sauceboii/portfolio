@@ -1,168 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elisha's Portfolio</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elisha Dauda | Portfolio</title>
   <style>
-    body {
-      background-color: #f5f5f5;
-      font-family: 'Poppins', sans-serif;
-      color: #333;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
     }
 
     header {
-      background-color: #007BFF;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
       color: white;
-      padding: 20px 0;
+      padding: 60px 20px 40px;
       text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
     }
 
     nav {
-      background-color: #0056b3;
-      text-align: center;
-      padding: 10px 0;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav ul li {
-      display: inline-block;
-      margin: 0 15px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 16px;
-    }
-
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      padding: 40px 5%;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h2 {
-      border-bottom: 2px solid #007BFF;
-      padding-bottom: 10px;
-      margin-top: 40px;
-      font-size: 24px;
-    }
-
-    .project {
-      background-color: white;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 8px;
+      background: white;
+      padding: 15px 0;
+      display: flex;
+      justify-content: center;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    .social {
-      margin-top: 30px;
-      text-align: center;
-    }
-
-    .social a {
-      margin: 0 10px;
+    nav a {
+      margin: 0 20px;
       text-decoration: none;
-      color: #007BFF;
+      color: #333;
       font-weight: bold;
+      transition: color 0.3s ease;
     }
 
-    footer {
+    nav a:hover {
+      color: #6a11cb;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
       text-align: center;
+      margin-bottom: 20px;
+      color: #444;
+      font-size: 2rem;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    .projects-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .project-box {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       padding: 20px;
-      background-color: #ddd;
-      margin-top: 40px;
-      font-size: 14px;
+      width: 280px;
+      transition: transform 0.3s ease;
     }
 
-    /* Responsive Styling */
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 28px;
-      }
-
-      h2 {
-        font-size: 20px;
-      }
-
-      .container {
-        padding: 20px 4%;
-      }
-
-      .project {
-        padding: 15px;
-      }
-
-      .social a {
-        display: block;
-        margin: 10px 0;
-      }
-
-      nav ul li {
-        display: block;
-        margin: 10px 0;
-      }
+    .project-box:hover {
+      transform: translateY(-5px);
     }
-  </style>
-</head>
-<body>
 
-  <header>
-    <h1>Elisha Dauda</h1>
-    <p>Virtual Assistant | Web Design Enthusiast</p>
-  </header>
+    .project-box h3 {
+      margin-bottom: 10px;
+      color: #2575fc;
+    }
 
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    .project-box a {
+      color: #6a11cb;
+      text-decoration: none;
+    }
 
-  <div class="container">
-    <h2 id="about">About Me</h2>
-    <p>Hey! I'm Elisha, a passionate virtual assistant diving into the world of web design. I love creating beautiful, functional websites and I'm constantly learning new skills.</p>
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-top: 30px;
+    }
 
-    <h2 id="projects">My Projects</h2>
-    <div class="project">
-      <h3>Simple Portfolio Website</h3>
-      <p>A clean and minimal website showcasing my skills and future projects. Built with HTML and CSS.</p>
-    </div>
-    <div class="project">
-      <h3>Task Manager Concept</h3>
-      <p>A layout idea for a personal task manager app. Still in progress!</p>
-    </div>
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
 
-    <div class="social" id="contact">
-      <h2>Connect with Me</h2>
-      <a href="#">LinkedIn</a>
-      <a href="#">GitHub</a>
-      <a href="#">Twitter</a>
-    </div>
-  </div>
+    button {
+      background: #2575fc;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
 
-  <footer>
-    &copy; 2025 Elisha Dauda. All rights reserved.
-  </footer>
+    button:hover {
+      background: #1a5ee2;
+    }
 
-</body>
-</html>
+    @media (max-width: 600
